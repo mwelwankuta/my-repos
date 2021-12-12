@@ -7,7 +7,7 @@
     "dev": "nodemon src/index",
     "start": "node src/index",
     "build": "sass public/style.scss:public/style.css",
-    "prestart":"num run build",
+    "prestart": "npm run build",
     "watch:scss": "sass -w public/style.scss:public/style.css"
   },
   "keywords": [
@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
-    "cheerio": "^1.0.0-rc.10",
+    "merlee.js": "0.0.6",
     "sass": "^1.45.0"
   },
   "devDependencies": {
