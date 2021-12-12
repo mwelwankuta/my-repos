@@ -7,6 +7,7 @@
     "dev": "nodemon src/index",
     "start": "node src/index",
     "build": "sass public/style.scss:public/style.css",
+    "prestart":"num run build",
     "watch:scss": "sass -w public/style.scss:public/style.css"
   },
   "keywords": [
