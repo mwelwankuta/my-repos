@@ -1,0 +1,28 @@
+{
+  "name": "yotube-merlee-scraper",
+  "version": "1.0.0",
+  "description": "merlee.js api that scrapes for youtube data",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index",
+    "start": "node src/index",
+    "build": "sass public/style.scss:public/style.css",
+    "watch:scss": "sass -w public/style.scss:public/style.css"
+  },
+  "keywords": [
+    "merlee.js",
+    "node.js",
+    "cheerio",
+    "web scraping"
+  ],
+  "author": "Mwelwa Nkuta",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "sass": "^1.45.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

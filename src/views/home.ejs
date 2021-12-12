@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>Mwlewa's GitHub Repos</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">Mwelwa's GitHub Repos</a>
+
+      <form method="post" action="/search">
+        <input
+          type="search"
+          name="search"
+          placeholder="search for repo..."
+          id="search"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <% if (repos && repos.length > 0) { %> <% repos.forEach((repo, idx) => { %>
+    <div class="card">
+      <p class="count"><%= idx+1 %></p>
+
+      <div class="card-content">
+        <p class="title"><%= repo.name %></p>
+        <p class="about"><%= repo.description %></p>
+        <a
+          class="link"
+          href="<%= repo.link %> "
+          target="_blank"
+          rel="noopener noreferrer"
+          >visit repo</a
+        >
+      </div>
+    </div>
+    <% }) %> <% } else {%>
+    <p>No Content...</p>
+    <% } %>
+  </body>
+</html>
