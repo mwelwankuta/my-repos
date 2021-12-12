@@ -4,8 +4,8 @@
   "description": "merlee.js api that scrapes for youtube data",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon index",
-    "start": "node index",
+    "dev": "nodemon src/index",
+    "start": "node src/index",
     "build": "sass public/style.scss:public/style.css",
     "prestart": "npm run build",
     "watch:scss": "sass -w public/style.scss:public/style.css"
