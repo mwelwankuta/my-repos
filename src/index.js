@@ -1,7 +1,8 @@
 const merlee = require('merlee.js');
 const { default: axios } = require('axios');
 
-const app = new merlee({ port: 3000, views: 'src/views', static: 'public' });
+const port = process.env.PORT || 3000
+const app = new merlee({ port, views: 'src/views', static: 'public' });
 
 const repos = [];
 app.handler({ method: 'get', path: '/' }, async (req, res) => {
