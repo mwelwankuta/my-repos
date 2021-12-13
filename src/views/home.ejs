@@ -17,6 +17,7 @@
           name="search"
           placeholder="search for repo..."
           id="search"
+          value="<%=search%>"
         />
         <button type="submit">Search</button>
       </form>
@@ -28,6 +29,7 @@
       <div class="card-content">
         <p class="title"><%= repo.name %></p>
         <p class="about"><%= repo.description %></p>
+        <% if (repo.link) { %>
         <a
           class="link"
           href="<%= repo.link %> "
@@ -35,6 +37,7 @@
           rel="noopener noreferrer"
           >visit repo</a
         >
+        <% } %>
       </div>
     </div>
     <% }) %> <% } else {%>
