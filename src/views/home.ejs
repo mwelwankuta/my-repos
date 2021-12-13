@@ -32,7 +32,7 @@
         <% if (repo.link) { %>
         <a
           class="link"
-          href="<%= repo.link %> "
+          href="<%= repo.link %>"
           target="_blank"
           rel="noopener noreferrer"
           >visit repo</a
@@ -40,8 +40,14 @@
         <% } %>
       </div>
     </div>
-    <% }) %> <% } else {%>
+    <% }) } else { %>
     <p>No Content...</p>
     <% } %>
+
+    <footer class="footer">
+      <p>
+        built with <a href="https://npmjs.com/package/merlee.js">merlee.js</a>
+      </p>
+    </footer>
   </body>
 </html>
