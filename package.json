@@ -1,7 +1,7 @@
 {
-  "name": "yotube-merlee-scraper",
+  "name": "github-merlee-scraper",
   "version": "1.0.0",
-  "description": "merlee.js api that scrapes for youtube data",
+  "description": "merlee.js api that scrapes for github data",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index",
