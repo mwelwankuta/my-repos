@@ -5,13 +5,7 @@ const port = process.env.PORT || 3000;
 const app = new merlee({
   port,
   static: "public",
-});
-
-// app routes
-app.handler({ method: "get", path: "/" }, async (req, res) => {
-  const { repos, status } = await getRepos();
-  res.render("home", { repos, search: "" }, status);
-});
+});https://my-repos-merlee-site.onrender.com
 
 app.handler({ method: "get", path: "/api" }, async (req, res) => {
   const { repos, status } = await getRepos();
