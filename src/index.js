@@ -2,7 +2,7 @@ const merlee = require("merlee.js");
 const getRepos = require("./getRepos");
 
 const port = process.env.PORT || 3000;
-const app = merlee({
+const app = new merlee({
   port,
   static: "public",
 });
