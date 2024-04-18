@@ -1,11 +1,16 @@
 import merlee, { NextFunction, Request, Response } from "merlee.js";
 import getRepos from "./api";
+import cors from "cors";
 
 const port = process.env.PORT;
 const app = merlee({
   port: port ? parseInt(port) : 3000,
   static: "public",
-  middleware: [],
+  middleware: [
+    cors({
+      origin: "*",
+    }),
+  ],
 });
 
 app.handler(
@@ -19,11 +24,17 @@ app.handler(
 app.handler(
   {
     method: "get",
-    path: "/api/middle",
+    path: "/middle/api",
     middleware: [
-      (_req: Request, _res: Response, next: NextFunction | undefined) => {
+      (req: Request, _res: Response, _next: NextFunction) => {
+        console.log(req.url);
         console.log("wont list name");
-        if (next) next();
+        // next(new Error("not found"));
+      },
+      (req: Request, _res: Response, _next: NextFunction) => {
+        console.log(req.url);
+        console.log("will list name");
+        // next(new Error("not found"));
       },
     ],
   },
@@ -33,7 +44,7 @@ app.handler(
 );
 
 app.handler(
-  { method: "get", path: "/api", middleware: [] },
+  { method: "get", path: "/api" },
   async (_req: Request, res: Response) => {
     const { repos, status } = await getRepos();
 

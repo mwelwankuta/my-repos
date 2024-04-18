@@ -19,10 +19,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
-    "merlee.js": "0.0.6",
+    "cors": "^2.8.5",
+    "merlee.js": "0.0.8",
     "sass": "^1.45.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/node": "^20.12.7",
     "nodemon": "^2.0.15",
     "ts-node": "^10.9.2",
