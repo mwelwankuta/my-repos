@@ -2,11 +2,11 @@
   "name": "github-merlee-scraper",
   "version": "1.0.0",
   "description": "merlee.js api that scrapes for github data",
-  "main": "src/index.ts",
+  "main": "src/server.ts",
   "scripts": {
-    "dev": "nodemon src/index",
-    "start": "node src/index",
-    "build": "echo \"built\"",
+    "dev": "nodemon src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
     "watch:scss": "sass -w public/style.scss:public/style.css"
   },
   "keywords": [
