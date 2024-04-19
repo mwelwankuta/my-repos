@@ -5,8 +5,8 @@
   "main": "src/server.ts",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "start": "node dist/server.js",
-    "build": "tsc",
+    "start": "ts-node src/server.ts",
+    "build": "echo \"hello\"",
     "watch:scss": "sass -w public/style.scss:public/style.css"
   },
   "keywords": [
