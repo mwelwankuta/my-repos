@@ -20,7 +20,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cors": "^2.8.5",
-    "merlee.js": "0.0.8",
+    "merlee.js": "0.0.9",
     "sass": "^1.45.0"
   },
   "devDependencies": {
